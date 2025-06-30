@@ -25,6 +25,10 @@ Each tool is designed to work across different screen sizes – from mobile phon
 2. Open the desired calculator folder.
 3. Open index.html in your browser.
 
+## Live Demo
+Visit the live site here:
+https://calculator-by-suresh.web.app/
+
 
 
 
