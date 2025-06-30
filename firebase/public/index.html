@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="container1">
+        <nav class="navbar">
+            <h1 class="navlogo">Calculators</h1>
+            <ul>
+                <li><a href="index.html">C-F</a></li>
+                <li><a href="fd.html">FD</a></li>
+                <li><a href="word.html">Letter counter</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+            </ul>
+        <img src="images/menuiconblack.svg" class="menuimg" onclick="openSidebar()">
+    </nav>
+
+    <div class="sidebar">
+        <h1 class="sidelogo">Calculators</h1>
+        <img src="images/closeiconblack.svg" class="closeimg" onclick="closeSidebar()">
+        <ul>
+            <li><a href="index.html">C-F</a></li>
+                <li><a href="fd.html">FD</a></li>
+                <li><a href="word.html">Letter counter</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+        </ul>     
+    </div>
+    </div>
+
+    <div class="container">
+        <h2 class="h2">Celsius To Fahrenheit</h2>
+        <input type="text" id="input" placeholder="Value in Celsius">
+        <button id="button" type="submit" onclick="convert()">Convert to fahrenheit</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+
+    function convert(){
+        const inputValue=Number(document.getElementById("input").value)
+        const convertedValue=(inputValue*9/5)+32
+        const result=document.getElementById("result")
+        result.innerHTML=convertedValue.toFixed(2)+" Fahrenheit"
+    }
+
+    function openSidebar(){
+        const openSide=document.querySelector(".sidebar");
+        openSide.style.display="block";
+    }
+
+    function closeSidebar(){
+        const closeSide=document.querySelector(".sidebar");
+        closeSide.style.display="none";
+
+    }
+    </script>
+
+</body>
+</html>

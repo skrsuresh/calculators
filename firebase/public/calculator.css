@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:blanchedalmond;
+}
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:blanchedalmond;
+}
+
+.container1{
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.navbar{
+    color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-family: "Segoe UI","Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    z-index: -1;
+    padding-top: 1rem;
+    background-color: aliceblue;
+    padding-bottom: 1rem;
+}
+
+ .navbar a{
+    cursor: pointer;
+ }
+
+.navbar a:hover{
+    color:darkorange;
+} 
+
+.navbar li{
+    
+    display: inline-block;
+    margin-right: 3rem;
+
+}
+
+
+a{
+    text-decoration: none;
+    color:black
+}
+
+.navlogo{
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.sidebar{
+    color: aliceblue;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color:white; 
+    display: none;
+}
+
+
+.sidebar li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0px 30px 0px;
+    font-size: 1.1rem;
+    font-family: "Segoe UI","Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    width: 100%;
+}
+
+.sidelogo{
+    font-family: "Dancing Script", cursive;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 1.3rem;
+    margin-left: 1.3rem;
+    display: inline-block;
+    color: black;
+}
+
+.sidebar a{
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+}
+.sidebar a:hover{
+    background-color: aliceblue;
+    color: #ffa62b;
+}
+
+.menuimg{
+    display: none;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.closeimg{
+    position: fixed;
+    right: 70px;
+    top: 25px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    opacity: 80%;
+}
+
+@media (max-width:600px){
+    .navbar ul{
+        display: none;
+    }
+
+    .menuimg{
+        display: inline-block;
+    }
+
+    .navlogo{
+        font-size: 1.5rem;
+    }
+}
+
+
+.container{
+    background-color: black;
+    height: 450px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    top: 75px;
+    border-radius: 10px;
+}
+
+h2{
+    color: goldenrod;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#input,#input2,#input3,#button{
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+#button{
+    background-color: darkorange;
+}
+#result{
+    color: goldenrod;
+    text-align: center;
+}
+
+h3{
+    color: aliceblue;
+    margin-left: 53px;
+    margin-bottom: 5px;
+}
+
+#totalvalue,#returns{
+    padding: 0%;
+    margin-top: 10px;
+}
+
+
+select{
+    font-size: 20px;
+    width: 195px;
+    margin-left: 53px;
+    border-radius: 5px;
+    border-style: none;
+    padding: 2px;
+    margin-bottom: 15px;
+}

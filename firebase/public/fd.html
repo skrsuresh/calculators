@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculators</title>
+    <link rel="stylesheet" href="fd.css">
+</head>
+
+<body>
+    
+    <div class="container1">
+        <nav class="navbar">
+            <h1 class="navlogo">Calculators</h1>
+            <ul>
+                <li><a href="index.html">C-F</a></li>
+                <li><a href="fd.html">FD</a></li>
+                <li><a href="word.html">Letter counter</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+            </ul>
+            <img src="images/menuiconblack.svg" class="menuimg" onclick="openSidebar()">   
+        </nav>
+
+        <div class="sidebar">
+            <h1 class="sidelogo">Calculators</h1>
+            <img src="images/closeiconblack.svg" class="closeimg" onclick="closeSidebar()">
+            <ul>
+                <li><a href="index.html">C-F</a></li>
+                <li><a href="fd.html">FD</a></li>
+                <li><a href="word.html">Letter counter</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+            </ul>     
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="h2">FD calculator</h2>
+        <h3>Time period</h3>
+        <input type="text" id="input" placeholder="Enter time period in years">
+        <h3>Rate of interest (p.a)</h3>
+        <input type="text" id="input2" placeholder="Enter the Rate of interest (p.a)">
+        <h3>Total investment</h3>
+        <input type="text" id="input3" placeholder="Enter amount in Rs">
+        <button id="button" type="submit" onclick="calculate()">Calculate</button>
+        <h2 id="returns"></h2>
+        <h2 id="totalvalue"></h2>
+       
+    </div>
+
+    <script>
+    function calculate(){
+        let year=Number(document.getElementById("input").value)
+        let interest=Number(document.getElementById("input2").value)
+        let amount=Number(document.getElementById("input3").value)
+        let totalValue=document.getElementById("totalvalue")
+        let returns=document.getElementById("returns")
+        let calTotal=amount+(amount*interest*year/100)
+        totalValue.innerHTML= "Total value = Rs."+calTotal
+        let calReturn=calTotal-amount
+        returns.innerHTML="Returns = Rs."+calReturn
+    }
+
+    function openSidebar(){
+        const openSide=document.querySelector(".sidebar");
+        openSide.style.display="block";
+    }
+
+    function closeSidebar(){
+        const closeSide=document.querySelector(".sidebar");
+        closeSide.style.display="none";
+
+    }
+    </script>
+
+</body>
+</html>
